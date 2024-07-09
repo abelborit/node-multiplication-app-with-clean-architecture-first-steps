@@ -4,20 +4,23 @@
   "description": "---",
   "main": "index.js",
   "scripts": {
-    "dev:ts-node": "ts-node src/app.ts",
+    "dev": "ts-node src/app.ts -b 10",
     "dev:nodemon": "nodemon",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Abel Borit Guitton",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.14.10",
+    "@types/yargs": "^17.0.32",
     "nodemon": "^3.1.4",
     "rimraf": "^5.0.8",
     "ts-node": "^10.9.2",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
   }
 }

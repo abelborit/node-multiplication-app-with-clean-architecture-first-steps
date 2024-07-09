@@ -32,7 +32,9 @@ Esta sección veremos conceptos de Node como Argv (Argument Values) y vamos a in
 
 ### \* RECURSOS A USAR:
 
-- ejemplo
+- yargs: https://www.npmjs.com/package/yargs
+  - usando `npm i yargs`
+  - si se trabaja con typescript entonces colocar `npm i @types/yargs --save-dev`
 - ejemplo
 - ejemplo
 
@@ -41,11 +43,5 @@ Esta sección veremos conceptos de Node como Argv (Argument Values) y vamos a in
 - ejemplo
 - ejemplo
 - ejemplo
-
-### \* IMÁGENES DE LA APLICACIÓN:
-
-<div>
-  <img src="./screenshotsApp/Screenshot_1111111.png" alt="image" width="200">
-</div>
 
 ---
