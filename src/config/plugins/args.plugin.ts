@@ -27,6 +27,8 @@ export const yargPlugin = yargs(hideBin(process.argv))
     // console.log({ argv, options });
 
     if (argv.base < 1) throw "Error: base must be greater than 0";
+
+    return true;
   })
   .parseSync();
 
