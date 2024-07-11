@@ -23,6 +23,18 @@ export const yargPlugin = yargs(hideBin(process.argv))
     default: false,
     description: "Show Multiplication Table",
   })
+  .option("fileName", {
+    alias: "fn",
+    type: "string",
+    default: "multiplication-table",
+    description: "File Name",
+  })
+  .option("fileDestination", {
+    alias: "fd",
+    type: "string",
+    default: "outputs",
+    description: "File Destination",
+  })
   .check((argv, options) => {
     // console.log({ argv, options });
 

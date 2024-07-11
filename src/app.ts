@@ -30,7 +30,13 @@ import { ServerApp } from "./presentation/server-app";
 })();
 
 async function main() {
-  const { base, limit, show: showTable } = yargPlugin;
+  const {
+    base,
+    limit,
+    show: showTable,
+    fileDestination,
+    fileName,
+  } = yargPlugin;
 
-  ServerApp.run({ base, limit, showTable });
+  ServerApp.run({ base, limit, showTable, fileDestination, fileName });
 }
