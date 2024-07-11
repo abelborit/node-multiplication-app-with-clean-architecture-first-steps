@@ -3,8 +3,7 @@
 // console.log(process.argv);
 
 /* como ejemplo se podría colocar en la línea de comandos: node src/app.ts --base 100 --file="ejemplo.txt" y veremos que nos retorna un arreglo con las flags o banderas adicionales que le estamos colocando y esas son formas comunes de mandar argumentos */
-import { yargPlugin } from "./config/plugins/args.plugin";
-
+// import { yargPlugin } from "./config/plugins/args.plugin";
 // console.log(yargPlugin);
 
 /* en node todo lo que se ejecuta en nuestro archivo principal app.ts o index.ts o el archivo principal en general, todo es síncrono. No se podría utilizar asincronía en nuestro root de la aplicación. Por ejemplo si trabajamos con una dependencia de terceros y esa dependencia trabaja de forma asíncrona o sino que queremos trabajar esperando una respuesta de alguna petición http y traer la data de algún otro lugar. Para eso podemos usar las funciones anónimas autoinvocadas */
@@ -23,7 +22,15 @@ import { yargPlugin } from "./config/plugins/args.plugin";
 //   console.log("Main Ejecutado");
 // }
 
+import { yargPlugin } from "./config/plugins/args.plugin";
+import { ServerApp } from "./presentation/server-app";
 
-(() => {
-  console.log(yargPlugin);
+(async () => {
+  await main();
 })();
+
+async function main() {
+  const { base, limit, show: showTable } = yargPlugin;
+
+  ServerApp.run({ base, limit, showTable });
+}
