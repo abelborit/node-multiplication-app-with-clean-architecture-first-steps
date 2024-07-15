@@ -38,5 +38,6 @@ async function main() {
     fileName,
   } = yargPlugin;
 
+  /* si por ejemplo en server-app.ts no se utilizara static run(......) entonces se tendría primero que instanciar la clase como "const run = new ServerApp().run" para poder utilizar método run, pero en este caso solo se llama al método sin instanciar la clase */
   ServerApp.run({ base, limit, showTable, fileDestination, fileName });
 }
